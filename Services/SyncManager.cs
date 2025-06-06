@@ -29,7 +29,6 @@ namespace FileSync.Services
         };
         _logManager.SaveLog(newLog);
       }
-
       return actions;
     }
   }
