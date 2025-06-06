@@ -18,6 +18,7 @@
     {
       log.SyncTime = DateTime.Now;
       var serializer = new XmlSerializer(typeof(SyncLog));
+      
       using (var writer = new StreamWriter(_logFilePath))
       {
         serializer.Serialize(writer, log);
@@ -32,6 +33,7 @@
       }
 
       var serializer = new XmlSerializer(typeof(SyncLog));
+      
       using (var reader = new StreamReader(_logFilePath))
       {
         return (SyncLog)serializer.Deserialize(reader);
